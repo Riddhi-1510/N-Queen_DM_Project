@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainPage</title>
+    <!-----------------------------------Fond awesome---------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-----------------------------------Custom css---------------------------------------->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-shrink">
+            <a href="index.html" target="_blank" class="brand-logo">N-Queens</a>
+            <i onclick="document.querySelector('nav').classList.toggle('nav-full')"
+                class="fa-solid fa-bars bar-icon"></i>
+        </div>
+
+        <ul class="nav-expand">
+            <li class="nav-menu"><a href="project.html" class="nav-link" target="_blank">Project</a></li>
+            <li class="nav-menu"><a href="document.html" class="nav-link" target="_blank">Document</a></li>
+            <li class="nav-menu"><a href="contact.html" class="nav-link" target="_blank">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- nav-bar laptop -->
+
+    <div class="nav-bar">
+        <ul>
+            <li class="Nqueenlogo"><a href="index.html"target="_blank">N-Queens</a></li>
+            <li class="pdc"><a href="project.html"  target="_blank">Project</a></li>
+            <li class="pdc"><a href="document.html" target="_blank">Document</a></li>
+            <li class="pdc"><a href="contact.html" target="_blank">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="chess-img"></div>
+
+    <div class="chess_con">
+        <h1><img src="/qlogo.png" class="qlo"alt="">
+            About N-Queen</h1>
+        <p>The N-Queens problem is a classic puzzle in computer science
+            and mathematics. It involves placing N queens on an N X N chess-
+            board in such a way that no two queens threaten each other. This
+            can be achieved by positioning the queens such that two queens do
+            not share the same row, column and diagonal.
+        </p>
+    </div>
+    <div class="chess_con">
+        <h1><img src="/qlogo.png" class="qlo"alt="">N-Queen Moves</h1>
+        <img src="/move.png" class="nqimg" alt="">
+        <p class="peraq2">
+            Queen can move horizontally, vertically, and diagonally across the
+            board. The challenge lies in finding a solution for any given N, de-
+            termining all possible arrangements of queens that satisfy the prob-
+            lem's constraints.
+        </p>
+    </div>
+    <div class="chess_con con11">
+        <h1><img src="/qlogo.png" class="qlo1"alt=""><br>N-Queen Problem</h1>
+        <img src="/nq.jpg" class="nqimg" alt="">
+        <p class="peraq2">
+            Solving the N-Queens problem can be approached using various
+            techniques, such as backtracking, constraint satisfaction.Researchers
+            have devised numerous algorithms and strategies to tackle the problem efficiently and find solutions for larger values of N.
+            Indeed, the N-Queens problem is a captivating and challenging
+            combinatorial problem that has intrigued researchers and enthusiasts in the field of problem-solving.
+            The N-Queens problem serves as a benchmark for evaluating the
+            efficiency and effectiveness of different algorithms and heuristics.
+            Researchers have explored various techniques, such as backtracking,
+            constraint satisfaction, genetic algorithms, and simulated annealing,
+            to tackle this problem.
+
+        </p>
+    </div>
+
+
+</body>
+
+</html>

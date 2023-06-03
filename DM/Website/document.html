@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-----------------------------------Fond awesome---------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-----------------------------------Custom css---------------------------------------->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-shrink">
+            <a href="index.html" target="_blank" class="brand-logo">N-Queens</a>
+            <i onclick="document.querySelector('nav').classList.toggle('nav-full')"
+                class="fa-solid fa-bars bar-icon"></i>
+        </div>
+
+        <ul class="nav-expand">
+            <li class="nav-menu"><a href="project.html" class="nav-link" target="_blank">Project</a></li>
+            <li class="nav-menu"><a href="document.html" class="nav-link" target="_blank">Document</a></li>
+            <li class="nav-menu"><a href="contact.html" class="nav-link" target="_blank">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- nav-bar laptop -->
+
+    <div class="nav-bar">
+        <ul>
+            <li class="Nqueenlogo"><a href="index.html" target="_blank">N-Queens</a></li>
+            <li class="pdc"><a href="project.html" target="_blank">Project</a></li>
+            <li class="pdc"><a href="document.html" target="_blank">Document</a></li>
+            <li class="pdc"><a href="contact.html" target="_blank">Contact</a></li>
+        </ul>
+    </div>
+    <div class="intro">
+        <p class="in2">
+            We have made a YouTube video ,Document and the code to solve N-QUEEN<br><span class="ins1"> Scroll down to
+                see our work.</span>
+        </p>
+    </div>
+    <div class="line"></div>
+    <div class="yout">
+        <p><a href="#r1">YouTube video</a></p>
+    </div>
+
+    <div class="youtube">
+        <video controls class="y11" id="r1">
+            <source src="/Sample1.mp4">
+        </video>
+
+    </div>
+    <div class="line"></div>
+    <div class="yout">
+        <p><a href="#r2">Document(Latex)</a></p>
+    </div>
+
+    <div class="latex">
+        <i class="fa fa-file-pdf-o" style="font-size:48px;color:red"></i><br>
+        <a href="/N_QUEEN (4).pdf"
+            id="r2"><span>.Pdf</span></a>
+    </div>
+    <div class="line"></div>
+
+
+    <div class="yout">
+        <p><a href="#r3">Code (C++)</a></p>
+    </div>
+
+    <div class="code">
+        <p class="c1">Here, the code is written in C++ language here is the link of online <a
+                href="https://www.onlinegdb.com/"><span>IDE</span></a>
+            in this IDE first remove default code and then copy paste the code from this page and select C++ language
+            and then click on run.</p>
+
+        <h1 class="c2">N x N Solution</h1>
+        <div class="line line2"></div>
+        <!-- code -->
+        <code>
+#include &lt;iostream&gt;<br>
+using namespace std;<br>
+<br>               
+    bool isSafe(char** board,int n,int row,int col);<br>
+    void print(char** board,int n);<br>
+    void nqueen(char** board,int n,int row);<br>
+    <br>               
+    bool isSafe(char** board,int n,int row,int col){<br>
+    //vertical up<br>
+    for(int i=row-1;i>=0;i--){<br>
+     &nbsp;&nbsp;&nbsp;&nbsp;   if(board[i][col]=='Q'){<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false;<br>
+        &nbsp;&nbsp;}<br>
+    }<br>
+    <br>                   
+    //left diagonal<br>
+    <br>                   
+    for(int i=row-1,j=col-1;i>=0 && j>=0;i--,j--){<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;if(board[i][j]=='Q'){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  return false;<br>
+            &nbsp;&nbsp; }<br>
+    }<br>
+    <br>                   
+    //right diagonal<br>
+    for(int i=row-1,j=col+1;i>=0 && j&lt;=n;i--,j++){<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(board[i][j]=='Q'){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   return false;<br>
+            &nbsp;&nbsp;&nbsp;}<br>
+    }<br>
+    <br>                  
+    return true; <br>
+    <br>                  
+    }<br>
+    void print(char** board,int n){<br>
+        &nbsp;&nbsp;&nbsp;       for(int i=0;i&lt;n;i++){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   for(int j=0;j&lt;n;j++){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     cout&lt;&lt;board[i][j]&lt;&lt;" ";<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout&lt;&lt;endl;<br>
+                &nbsp;&nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;&nbsp;cout&lt;&lt;endl;<br>
+    }<br>
+    void nqueen(char** board,int n,int row){<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(row==n){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(board,n);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return ;<br>
+        }<br>
+        <br>           
+        for(int j=0;j&lt;n;j++){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;           if(isSafe(board,n,row,j)){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; board[row][j]='Q';<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nqueen(board,n,row+1);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;board[row][j]='X';<br>
+                &nbsp;&nbsp;&nbsp;&nbsp; }<br>
+        }<br>
+        <br>           
+    }<br>
+    <br>           
+    <br>            
+int main() {<br>
+    &nbsp;&nbsp;int n;<br>
+    &nbsp;&nbsp;cin>>n;<br>
+    &nbsp;&nbsp;char** board= new char*[n];<br>
+    &nbsp;&nbsp;//Initialize<br>
+    &nbsp;&nbsp;for(int i=0;i&lt;n;i++){<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    board[i]=new char[n];<br>
+        &nbsp;   for(int j=0;j&lt;n;j++){<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;  board[i][j]='X';<br>
+            &nbsp; }<br>
+    }<br>
+    <br>               
+    nqueen(board,n,0);<br>
+    <br>
+    return 0;<br>
+}<br>
+<br>               
+</code>
+        <div class="line line3"></div>
+        <h1 class="c4">Our Team</h1>
+        <div class="ourT">
+            <div class="t1">
+                <p class="t11">Bansi Patel</p>
+                <p class="t12">202201190</p>
+                <p class="t13">Latex</p>
+            </div>
+            <div class="t1">
+                <p class="t11">Hardi Naik</p>
+                <p class="t12">202201477</p>
+                <p class="t13">PPT</p>
+            </div>
+            <div class="t1">
+                <p class="t11">Jeet Desai</p>
+                <p class="t12">202201474</p>
+                <p class="t13">Video creation</p>
+            </div>
+            <div class="t1">
+                <p class="t11">Meghavi Gohil</p>
+                <p class="t12">202201015</p>
+                <p class="t13">Latex</p>
+            </div>
+            <div class="t1">
+                <p class="t11">Riddhi Mistry</p>
+                <p class="t12">202201238</p>
+                <p class="t13">Website</p>
+            </div>
+            <div class="t1">
+                <p class="t11">Stuti Pandya</p>
+                <p class="t12">202201439</p>
+                <p class="t13">PPT</p>
+            </div>
+        </div>
+
+</body>
+
+</html>

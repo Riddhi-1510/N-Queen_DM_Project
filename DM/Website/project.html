@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <!-----------------------------------Fond awesome---------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-----------------------------------Custom css---------------------------------------->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-shrink">
+            <a href="index.html" target="_blank" class="brand-logo">N-Queens</a>
+            <i onclick="document.querySelector('nav').classList.toggle('nav-full')"
+                class="fa-solid fa-bars bar-icon"></i>
+        </div>
+
+        <ul class="nav-expand">
+            <li class="nav-menu"><a href="project.html" class="nav-link" target="_blank">Project</a></li>
+            <li class="nav-menu"><a href="document.html" class="nav-link" target="_blank">Document</a></li>
+            <li class="nav-menu"><a href="contact.html" class="nav-link" target="_blank">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- nav-bar laptop -->
+
+    <div class="nav-bar">
+        <ul>
+            <li class="Nqueenlogo"><a href="index.html"target="_blank">N-Queens</a></li>
+            <li class="pdc"><a href="project.html"  target="_blank">Project</a></li>
+            <li class="pdc"><a href="document.html" target="_blank">Document</a></li>
+            <li class="pdc"><a href="contact.html" target="_blank">Contact</a></li>
+        </ul>
+    </div>
+    <div class="intro">
+        <h1 class="in1">INTRODUCTION</h1>
+        <p class="in2">Here we are going to present how we have done our project of DISCRETE MATHEMATICS(SC205).</p>
+        <p class="in3">We have used Backtracking theory one of the concepts of tree theory to solve N x N chess board.
+        </p>
+    </div>
+
+    <div class="nqsolver"></div>
+
+    <div class="solution">
+        <h1 class="so1">Algorithm</h1>
+        <p class="so2">1 > Start with N X N empty chessboard</p>
+        <p class="so2">2 > Start from the first row (0th row) and iterate through each
+            colum (0 to N-1).</p>
+        <p class="so2">3 > Check if queen attacks on any previously placed queen.</p>
+        <p class="so2">4 > If the place is not safe then check for the next colum.</p>
+        <p class="so2">5 > If place is safe then repeat the step for next row.</p>
+        <p class="so2">6 > If all queens are placed successfully then our solution is ready.
+            Print the chessboard.</p>
+        <p class="so2">7 > If there are no more columns to try the current row ,backtrack to the previous row.Remove
+            the queen from the current
+            cell.Move back to previous row and try the next column. Repeat the steps until all possible arrangements
+            explored.
+            Backtracking allows the algorithm to explore different possibilities by undoing incorrect placements and
+            trying alternative
+            options. It eliminates the need to exhaustively check all possible combinations, significantly reducing the
+            time and space
+            complexity of the algorithm.</p>
+    </div>
+
+    <div class="solution">
+        <h1 class="so1">TimeComplexity</h1>
+        <p class="so2">The time complexity of the N Queen
+            problem can be examined using Big O notation. In the worst
+            case, when we need to consider all possible arrangements of
+            queens,the time complexity can be approximated as O(N!),
+            where N is the size of the chessboard.</p>
+        <p class="so2">The reason for this time complexity is that for each row, we
+            need to consider all possible columns to place a queen. In the
+            first row, there are N options, in the second row N-1 options
+            (excluding the column where the queen is already placed), and
+            so on. This leads to N*(N-1)*(N-2)*...*2*1 = N! possible configurations</p>
+
+        <h1 class="so1">SpaceComplexity</h1>
+        <p class="so2">The space complexity of N Queen problem is O(N).This is determined by recursive stack used during
+            backtracking algorithm</p>
+    </div>
+    <div class="imgAll">
+        <div class="im3"></div> <!--<img src="/steps.jpg" alt=""> -->
+        <div class="im1"></div><!--<img src="/bk5.png" alt="">-->
+        <div class="im2"></div><!--<img src="/bk6.png" alt=""> -->
+    </div>
+
+    <div class="graph23"></div>
+
+    <div class="line23"></div>
+
+</body>
+
+</html>
